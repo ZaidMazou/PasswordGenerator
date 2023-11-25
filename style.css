@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #FFF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #161623;
+}
+.bar{
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    padding: 20px;
+}
+.bar h2{
+    font-size: 30px;
+    text-align: center;
+}
+.container{
+    width: 700px;
+    height: 450px;
+    position: relative;
+    left: 23%;
+    top: 20%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    background:  #131324;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+.v_affiche{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+.v_affiche #affiche{
+    background: transparent;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: 30px;
+    text-align: center;
+}
+.v_affiche #affiche::placeholder{
+    text-align: center;
+    color: #FFF;
+    font-size: 30px;
+}
+.range{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.range input{
+    margin-left: 60px;
+    width: 30%;
+    background: #121255;
+    height: 50px;
+}
+.range #range-label{
+    width: 29px;
+    height: auto;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 24px;
+}
+.range span{
+    font-size: 20px;
+}
+.checkButon{
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+.checkButon input{
+    display: none;
+    transition: 0.3s ease;
+}
+.checkButon label{
+    background: #FFF;
+    color: #121255;
+    padding: 15px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+.checkButon input[type="checkbox"]:checked + label{
+    background: #4de757;
+    box-shadow: 2px 2px 20px #4de757;
+    transform: scale(1.1);
+    color: #FFF;
+}
+.progression{
+    width: 90%;
+    height: 15px;
+    background: #131324;
+    border: 1px solid #121255;
+    margin-bottom: 30px;
+}
+.progressbar{
+    height: 100%;
+}
+.valid {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.valid .btn,
+#reset,
+#copy 
+{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 8px;
+    padding-bottom:8px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background: #f45858;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+.valid button:hover{
+    transform: scale(1.05);
+}
+#reset{
+    background: #ee2f2f;
+}
+#copy{
+    background: #4de757;
+}

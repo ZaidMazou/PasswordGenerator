@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de mot de passe</title>
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bar">
+        <h2>Générez votre mot de passe</h2>
+    </div>
+    <div class="container">
+        <div class="v_affiche">
+            <input type="text" value="" placeholder="Mot de passe" id="affiche" name="affiche" readonly>
+           <div class="range">
+                <span>Nombre de caratères</span>
+                <input type="range" name="range" id="range" min="8" max="24" value="8" 
+                oninput="document.getElementById('range-label').value = this.value"
+                >
+                <input type="text" id="range-label" value="8" readonly>
+           </div>
+        </div>
+        <div class="checkButon">
+            <input type="checkbox" name="number" id="number">
+            <label for="number">
+                1-9
+            </label>
+            <input type="checkbox" name="alpha" id="alpha">
+            <label for="alpha">
+                a-z
+            </label>
+            <input type="checkbox" name="carateralphanum" id="carateralphanum">
+            <label for="carateralphanum">
+                #-@
+            </label>
+            <input type="checkbox" name="Alpha" id="Alpha">
+            <label for="Alpha">
+                A-Z
+            </label>
+        </div>
+        <div class="progression">
+            <div class="progressbar"></div>
+        </div>
+        <div class="valid">
+            <button class="btn">Générer</button>
+            <button id="reset">Reset</button>
+            <button id="copy">Copy</button>
+        </div>
+    </div>
+</body>
+</html>
